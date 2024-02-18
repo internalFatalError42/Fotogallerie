@@ -11,14 +11,14 @@
 <body>
     <header>
         <section class="header-section">
-            <img class="menu-logo" id="menu-logo" src="images/icons/bars-solid.svg" alt="menu" onclick="toggleMenu()">
+            <img class="menu-logo" id="menu-logo" src="images/icons/bars-solid.svg" alt="menu">
             <h1 class="header-title">Photogallery</h1>
             <nav class="header-menu" id="header-menu">
                 <img src="images/icons/xmark-solid.svg" class="close-button" id="close-button"></img>
                 <ul class="menu" id="menu">
-                    <li><a href="#gallery">Home</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#gallery" id="home">Home</a></li>
+                    <li><a href="#" id="contact-link">Contact</a></li>
+                    <li><a href="#" id="faq">FAQ</a></li>
                 </ul>
             </nav>
         </section>
@@ -27,18 +27,15 @@
         <section class="image-gallery" id="image-gallery"></section>
         <dialog id="dialog">
             <button class="dialog-close" id="dialog-close">Close</button>
-            <div class="dialog-content" id="dialog-content">
-                <button class="image-dialog-left" id="image-dialog-left"><</button>
-                <img class="image-dialog-img" id="image-dialog-img" src="" alt="Image">
-                <button class="image-dialog-right" id="image-dialog-right">></button>
-            </div>
+            <section class="dialog-content" id="dialog-content">
+            </section>
         </dialog>
     </main>
     <footer>
         <section class="footer-section">
             <ul>
-                <li><a href="#">Impressum</a></li>
-                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#" id="impressum">Impressum</a></li>
+                <li><a href="#" id="data-protection">Datenschutz</a></li>
             </ul>
             <ul class="social-media">
                 <li><a href="https://www.facebook.com"><img src="images/icons/facebook.png" alt="facebook"></a></li>
@@ -48,5 +45,6 @@
         </section>
     </footer>
     <script type="module" src="script.js"></script>
+    <script type="module" src="dataProtection.js"></script>
 </body>
 </html>

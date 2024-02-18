@@ -42,9 +42,9 @@ html {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 50px;
+    padding: 8px 50px;
     background-color: #1E1F22;
     color: #ffffff;
     box-shadow: 0px 0px 10px 0px #000000;
@@ -72,7 +72,7 @@ header {
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 16px;
             font-weight: 600;
         }
     
@@ -82,7 +82,7 @@ header {
             gap: 10px;
             visibility: hidden;
             position: fixed;
-            top: 90px;
+            top: 64px;
             left: 20px;
             width: 100px;
             max-width: 200px;
@@ -118,7 +118,7 @@ header {
 }
 
 main {
-    padding: 128px 0;
+    padding: 0;
     margin: 100px 0;
     display: flex;
     flex-direction: column;
@@ -156,20 +156,22 @@ main {
         align-items: center;
         justify-content: center;
         position: fixed;
-        top: 50%;
+        /* top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
+        top: 0;
         width: 100%;
         height: 100%;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
         visibility: hidden;
         background-color: transparent;
         backdrop-filter: blur(10px);
         gap: 16px;
+        border: none;
 
         .dialog-close {
             position: absolute;
-            top: 90px;
+            top: 56px;
             right: 0;
             padding: 10px 20px;
             background-color: transparent;
@@ -186,21 +188,19 @@ main {
         
         .dialog-content {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-
-            /* background-color: #1E1F22; */
             max-width: 800px;
             width: 100%;
-            max-height: 500px;
             height: 100%;
 
             img {
                 width: 100%;
-                /* height: 500px; */
+                height: 500px;
                 object-fit: cover;
                 margin-bottom: 20px;
+                border-radius: 8px;
             }
             
             button {
@@ -218,21 +218,178 @@ main {
             }
     
             .image-dialog-left {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                position: relative;
+                position: absolute;
                 left: 0;
                 border-radius: 50%;
                 font-size: 32px;
             }
     
             .image-dialog-right {
-                position: relative;
+                position: absolute;
                 right: 0;
                 border-radius: 50%;
                 font-size: 32px;
+            }
+            /* Contact */
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                max-width: 800px;
+                height: 800px;
+                padding-top: 80px;
+                background-color: #383B3F;
+                padding: 64px 32px;
+
+                h1 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #ffffff;
+                }
+
+                label {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #ffffff;
+                }
+
+                input, select, textarea {
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: #1E1F22;
+                    color: #ffffff;
+
+                    
+                }
+
+                textarea {
+                    resize: none;
+                    height: 160px;
+                }
+
+                .data-protection-text {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+
+                    .accept {
+                        cursor: pointer;
+                    }
+                    p {
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #ffffff;
+                    }
+                }
+                .button-section {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    
+                    input {
+                        padding: 10px 20px;
+                        border-color: rgb(230, 230, 230);
+                        background-color: rgb(230, 230, 230);
+                        color: black;
+                        border-radius: 0;
+                        border: none;
+                        border-radius: 5px;
+                        transition: background-color 0.5s;
+                    }
+                }
+            
+            }
+
+            .contact-success {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                width: 80%;
+                max-width: 600px;
+                height: 300px;
+                padding-top: 80px;
+                background-color: #383B3F;
+                padding: 64px 32px;
+                color: white;
+            }
+
+            .active-button {
+                width: 112px;
+                margin-left: 24px;
+                margin-right: 24px;
+                border-color: green;
+                background-color: green;
+                color: white;
+                border-radius: 0;
+                transition: background-color 0.5s;
+                
+                &:hover{
+                    border-width: 2px;
+                    border-color: rgb(54, 230, 98);
+                    background-color: rgb(54, 230, 98);
+                    cursor: pointer;
+                }
+            }
+
+            .data-protaction-content {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                max-width: 800px;
+                height: 800px;
+                padding-top: 80px;
+                background-color: #383B3F;
+                padding: 32px;
+                overflow-x: scroll;
+                color: #ffffff;
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    text-decoration-thickness: 4px;
+                    text-underline-offset: 4px;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        color: green;
+                    }
+                }
+            }
+
+            .impressum {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                max-width: 800px;
+                height: 800px;
+                padding-top: 80px;
+                background-color: #383B3F;
+                padding: 64px 64px;
+                color: white;
+            }
+
+            .faq {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+                max-width: 800px;
+                height: 800px;
+                padding-top: 80px;
+                background-color: #383B3F;
+                padding: 64px 64px;
+                color: white;
+                overflow-y: scroll;
+                padding-bottom: 96px;
             }
         }
     }
@@ -240,9 +397,9 @@ main {
 
 footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 50px;
+    padding: 8px 50px;
     background-color: #1E1F22;
     color: #ffffff;
     box-shadow: 0px 0px 10px 0px #000000;
@@ -256,7 +413,7 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        gap: 16px;
         width: 100%;
         max-width: 1440px;
 
